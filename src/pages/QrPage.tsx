@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { QRCodeSVG } from "qrcode.react";
 import { ArrowLeft, Download } from "lucide-react";
 import { site } from "../site";
+import { SiteLogo } from "../components/Chrome";
 
 export function QrPage() {
   const qrWrapRef = useRef<HTMLDivElement>(null);
@@ -54,9 +55,7 @@ export function QrPage() {
       </div>
 
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center px-5 pb-12 pt-10 text-center">
-        <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ink text-lg font-bold text-white">
-          DF
-        </span>
+        <SiteLogo size="lg" />
         <h1 className="mt-4 text-3xl font-bold tracking-[-0.02em] text-ink">
           {site.fullName}
         </h1>
