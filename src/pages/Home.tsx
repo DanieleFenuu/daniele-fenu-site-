@@ -1,6 +1,6 @@
 import { Footer, Header } from "../components/Chrome";
 import { Hero } from "../components/Hero";
-import { FinalCta, Services } from "../components/Sections";
+import { FinalCta } from "../components/Sections";
 
 export function Home() {
   return (
@@ -8,8 +8,7 @@ export function Home() {
       <Header />
       <main className="pb-10">
         <Hero />
-        <Services />
-        {/* Lavori nascosti per ora — componente Projects pronto in Sections.tsx */}
+        {/* Sezioni nascoste per ora — Services e Projects pronti in Sections.tsx */}
         <FinalCta />
       </main>
       <Footer />
