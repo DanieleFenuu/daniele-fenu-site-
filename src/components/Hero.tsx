@@ -61,10 +61,10 @@ export function Hero() {
         >
           <InstagramIcon size={19} />
         </span>
-        <span className="ml-1.5 text-[15px] font-semibold tracking-tight text-ink">
+        <span className="ml-1.5 flex-1 text-center text-[15px] font-semibold tracking-tight text-ink">
           {site.instagramLabel}
         </span>
-        <ArrowUpRight size={17} className="ml-auto text-ink-soft" />
+        <ArrowUpRight size={17} className="shrink-0 text-ink-soft" />
       </a>
 
       {/* salva contatto */}
@@ -103,15 +103,6 @@ export function Hero() {
         </a>
       </div>
 
-      <a
-        href={site.github}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-2.5 flex items-center justify-center gap-1.5 rounded-2xl border border-line py-3.5 text-[13.5px] font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
-      >
-        GitHub — i miei progetti
-        <ArrowUpRight size={15} />
-      </a>
     </section>
   );
 }
