@@ -15,7 +15,7 @@ export const site = {
   role: "Junior Web Developer",
   tagline: "Siti Web e Software fatti secondo le esigenze del cliente.",
   intro: "Aiuto le piccole/medie attività a farsi trovare online e crescere.",
-  availability: "Disponibile 7/7 dalle 9 alle 22",
+  availability: "Disponibile 7/7 dalle 9.00 alle 22.00",
   photo: "", // opzionale: metti "/foto.jpg" in public/ e scrivi qui "/foto.jpg"
 
   // — Contatti —
@@ -29,8 +29,8 @@ export const site = {
   github: "https://github.com/tuo-username", // TODO: tuo username GitHub
   linkedin:
     "https://www.linkedin.com/in/daniele-fenu-761b5b365?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-  instagram: "https://instagram.com/danielefenu", // TODO: verifica il tuo handle
-  instagramLabel: "@danielefenu", // TODO: il tuo handle esatto
+  instagram: "https://www.instagram.com/danielefenu_",
+  instagramLabel: "@danielefenu_",
 
   get whatsappLink() {
     return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(

@@ -1,28 +1,85 @@
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  Globe,
+  MessagesSquare,
+  Nfc,
+  Sparkles,
+  Wrench,
+} from "lucide-react";
 import { site } from "../site";
 import { WhatsAppIcon } from "./icons";
+
+const serviceIcons = [Globe, MessagesSquare, Wrench, Nfc];
 
 export function Services() {
   return (
     <section className="mx-auto w-full max-w-xl px-5 pt-14">
-      <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
-        Mi occupo di creare:
+      <p className="inline-flex items-center gap-1.5 rounded-full bg-accent-soft px-3 py-1.5 text-[12.5px] font-semibold text-accent">
+        <Sparkles size={14} strokeWidth={2.2} />
+        Servizi
+      </p>
+      <h2 className="mt-3 text-[28px] font-bold leading-tight tracking-[-0.02em] text-ink">
+        Mi occupo di creare<span className="text-accent">:</span>
       </h2>
+      <p className="mt-1.5 max-w-md text-[14.5px] leading-relaxed text-ink-soft">
+        Tutto quello che serve a una piccola attività per esistere online e
+        farsi contattare.
+      </p>
 
-      <div className="mt-5 divide-y divide-line rounded-2xl border border-line">
-        {site.services.map((s) => (
-          <div key={s.n} className="px-5 py-5">
-            <p className="text-[12.5px] font-bold tracking-widest text-accent">
-              {s.n}
-            </p>
-            <h3 className="mt-1 text-[16.5px] font-semibold tracking-tight text-ink">
-              {s.title}
-            </h3>
-            <p className="mt-1 text-[14.5px] leading-relaxed text-ink-soft">
-              {s.text}
-            </p>
-          </div>
-        ))}
+      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+        {site.services.map((s, i) => {
+          const Icon = serviceIcons[i] ?? Globe;
+          const featured = i === 0;
+          return (
+            <div
+              key={s.n}
+              className={
+                featured
+                  ? "rounded-3xl bg-ink p-5 shadow-[0_20px_45px_-25px_rgba(35,39,46,0.7)] transition-transform hover:-translate-y-0.5 sm:col-span-2"
+                  : "rounded-3xl border border-line bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_16px_40px_-24px_rgba(32,56,255,0.5)]"
+              }
+            >
+              <div className="flex items-start justify-between">
+                <span
+                  className={
+                    featured
+                      ? "flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white"
+                      : "flex h-11 w-11 items-center justify-center rounded-2xl bg-accent-soft text-accent"
+                  }
+                >
+                  <Icon size={21} strokeWidth={2} />
+                </span>
+                <span
+                  className={
+                    featured
+                      ? "text-[26px] font-bold leading-none tracking-tight text-white/15"
+                      : "text-[26px] font-bold leading-none tracking-tight text-ink/10"
+                  }
+                >
+                  {s.n}
+                </span>
+              </div>
+              <h3
+                className={
+                  featured
+                    ? "mt-4 text-[17px] font-semibold tracking-tight text-white"
+                    : "mt-4 text-[16.5px] font-semibold tracking-tight text-ink"
+                }
+              >
+                {s.title}
+              </h3>
+              <p
+                className={
+                  featured
+                    ? "mt-1 text-[14px] leading-relaxed text-white/70"
+                    : "mt-1 text-[14px] leading-relaxed text-ink-soft"
+                }
+              >
+                {s.text}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
