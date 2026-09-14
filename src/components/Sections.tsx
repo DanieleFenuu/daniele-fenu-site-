@@ -1,14 +1,12 @@
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { site } from "../site";
+import { WhatsAppIcon } from "./icons";
 
 export function Services() {
   return (
     <section className="mx-auto w-full max-w-xl px-5 pt-14">
-      <p className="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-ink-soft">
-        Cosa faccio
-      </p>
-      <h2 className="mt-1.5 text-2xl font-bold tracking-[-0.02em] text-ink">
-        Tre cose, fatte bene.
+      <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
+        Mi occupo di creare:
       </h2>
 
       <div className="mt-5 divide-y divide-line rounded-2xl border border-line">
@@ -114,7 +112,9 @@ export function FinalCta() {
           rel="noreferrer"
           className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-6 py-4 text-[16px] font-semibold text-ink transition-transform active:scale-[0.99]"
         >
-          <MessageCircle size={19} strokeWidth={2.2} className="text-accent" />
+          <span className="text-accent">
+            <WhatsAppIcon size={19} />
+          </span>
           {site.finalCta.button}
         </a>
         <p className="mt-3 text-[12.5px] text-white/50">

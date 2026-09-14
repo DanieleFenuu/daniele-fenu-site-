@@ -13,24 +13,24 @@ export const site = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Junior Web Developer",
-  tagline: "Siti semplici e veloci per piccole attività.",
-  intro:
-    "Aiuto bar, artigiani, negozi e professionisti a farsi trovare online e ricevere più contatti da telefono.",
-  location: "Italia · lavoro anche da remoto",
-  availability: "Disponibile per nuovi progetti",
+  tagline: "Siti Web e Software fatti secondo le esigenze del cliente.",
+  intro: "Aiuto le piccole/medie attività a farsi trovare online e crescere.",
+  availability: "Disponibile 7/7 dalle 9 alle 22",
   photo: "", // opzionale: metti "/foto.jpg" in public/ e scrivi qui "/foto.jpg"
 
-  // — Contatti (PLACEHOLDER: sostituisci con i tuoi) —
-  phoneDisplay: "+39 333 000 0000",
-  phoneHref: "+393330000000", // formato internazionale senza spazi, serve per tel: e vCard
-  whatsappNumber: "393330000000", // senza "+" — serve per wa.me
+  // — Contatti —
+  phoneDisplay: "+39 391 135 3470",
+  phoneHref: "+393911353470", // formato internazionale senza spazi, serve per tel: e vCard
+  whatsappNumber: "393911353470", // senza "+" — serve per wa.me
   whatsappMessage:
     "Ciao Daniele, ti ho trovato dal tuo sito. Vorrei farti una domanda sul sito per la mia attività.",
-  email: "ciao@danielefenu.it",
+  email: "danielefenu2004@gmail.com",
   website: "https://danielefenu.netlify.app", // ← il tuo URL Netlify finale (serve anche per QR + vCard)
-  github: "https://github.com/tuo-username",
-  linkedin: "https://linkedin.com/in/tuo-username",
-  instagram: "", // lascialo vuoto se non vuoi mostrarlo
+  github: "https://github.com/tuo-username", // TODO: tuo username GitHub
+  linkedin:
+    "https://www.linkedin.com/in/daniele-fenu-761b5b365?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+  instagram: "https://instagram.com/danielefenu", // TODO: verifica il tuo handle
+  instagramLabel: "@danielefenu", // TODO: il tuo handle esatto
 
   get whatsappLink() {
     return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(
@@ -38,11 +38,11 @@ export const site = {
     )}`;
   },
 
-  // — "Cosa faccio" —
+  // — "Mi occupo di creare" —
   services: [
     {
       n: "01",
-      title: "Sito vetrina in una pagina",
+      title: "Siti vetrina di attività",
       text: "Chi sei, cosa fai, dove sei, come contattarti. Online in pochi giorni, perfetto da mostrare al volo.",
     },
     {
@@ -55,9 +55,14 @@ export const site = {
       title: "Ritocchi e assistenza",
       text: "Testi, foto, orari, prezzi: aggiorno io. Piccole modifiche rapide senza che tu debba pensarci.",
     },
+    {
+      n: "04",
+      title: "Card NFC fisiche per social e recensioni",
+      text: "Card fisiche con chip NFC: il cliente avvicina il telefono e apre i tuoi social o la pagina delle recensioni Google.",
+    },
   ],
 
-  // — Progetti (screenshot placeholder in CSS, nessun file da creare) —
+  // — Progetti (nascosti per ora, li riaccendiamo quando vuoi) —
   projects: [
     {
       name: "Bar Centrale — sito vetrina",
