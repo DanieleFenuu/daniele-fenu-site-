@@ -1,4 +1,4 @@
-/* Build esplicita per Netlify (Vite + SPA fallback per /qr) */
+# Build esplicita per Netlify (Vite + SPA fallback per /qr)
 [build]
   command = "npm run build"
   publish = "dist"
