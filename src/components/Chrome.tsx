@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { QrCode } from "lucide-react";
 import { site } from "../site";
 
 /** Logo DF: usa public/logo.png, con monogramma di riserva se manca il file. */
@@ -26,26 +24,6 @@ export function SiteLogo({ size }: { size: "sm" | "lg" }) {
       onError={() => setMissing(true)}
       className={`${cls} object-cover`}
     />
-  );
-}
-
-export function Header() {
-  return (
-    <header className="mx-auto flex w-full max-w-xl items-center justify-between px-5 pt-5">
-      <Link to="/" className="flex items-center gap-2.5" aria-label="Home">
-        <SiteLogo size="sm" />
-        <span className="text-sm font-semibold tracking-tight text-ink">
-          Daniele Fenu
-        </span>
-      </Link>
-      <Link
-        to="/qr"
-        className="inline-flex items-center gap-1.5 rounded-full border border-line px-3.5 py-2 text-[13px] font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
-      >
-        <QrCode size={15} strokeWidth={2.2} />
-        QR
-      </Link>
-    </header>
   );
 }
 

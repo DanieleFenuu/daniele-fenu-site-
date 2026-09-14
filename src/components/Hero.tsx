@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
   Download,
   Mail,
   Phone,
+  QrCode,
 } from "lucide-react";
 import { downloadVCard } from "../lib/vcard";
 import { site } from "../site";
@@ -29,15 +31,24 @@ function ProfilePhoto() {
 
 export function Hero() {
   return (
-    <section className="mx-auto w-full max-w-xl px-5 pt-10 sm:pt-14">
-      {/* bollino disponibilità */}
-      <p className="inline-flex items-center gap-2 rounded-full bg-green-50 px-3 py-1.5 text-[12.5px] font-medium text-green-700">
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-        </span>
-        {site.availability}
-      </p>
+    <section className="mx-auto w-full max-w-xl px-5 pt-5 sm:pt-6">
+      {/* disponibilità a sinistra, QR a destra sulla stessa riga */}
+      <div className="flex items-center justify-between gap-2">
+        <p className="inline-flex items-center gap-2 rounded-full bg-green-50 px-3 py-1.5 text-[12.5px] font-medium text-green-700">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+          </span>
+          {site.availability}
+        </p>
+        <Link
+          to="/qr"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-line bg-white px-3.5 py-2 text-[13px] font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        >
+          <QrCode size={15} strokeWidth={2.2} />
+          QR
+        </Link>
+      </div>
 
       {/* gerarchia: foto + nome → ruolo → cosa */}
       <div className="mt-5 flex items-center gap-4">
