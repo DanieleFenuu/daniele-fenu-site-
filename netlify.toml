@@ -1,4 +1,8 @@
-/* Netlify SPA fallback: serve index.html per /qr e ogni altra route */
+/* Build esplicita per Netlify (Vite + SPA fallback per /qr) */
+[build]
+  command = "npm run build"
+  publish = "dist"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
