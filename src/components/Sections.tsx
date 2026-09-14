@@ -29,52 +29,23 @@ export function Services() {
       <div className="mt-5 grid gap-3 sm:grid-cols-2">
         {site.services.map((s, i) => {
           const Icon = serviceIcons[i] ?? Globe;
-          const featured = i === 0;
           return (
             <div
               key={s.n}
-              className={
-                featured
-                  ? "rounded-3xl bg-ink p-5 shadow-[0_20px_45px_-25px_rgba(35,39,46,0.7)] transition-transform hover:-translate-y-0.5 sm:col-span-2"
-                  : "rounded-3xl border border-line bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[0_16px_40px_-24px_rgba(32,56,255,0.5)]"
-              }
+              className="rounded-3xl bg-accent p-5 shadow-[0_20px_45px_-25px_rgba(32,56,255,0.8)] transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
             >
               <div className="flex items-start justify-between">
-                <span
-                  className={
-                    featured
-                      ? "flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white"
-                      : "flex h-11 w-11 items-center justify-center rounded-2xl bg-accent-soft text-accent"
-                  }
-                >
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-white">
                   <Icon size={21} strokeWidth={2} />
                 </span>
-                <span
-                  className={
-                    featured
-                      ? "text-[26px] font-bold leading-none tracking-tight text-white/15"
-                      : "text-[26px] font-bold leading-none tracking-tight text-ink/10"
-                  }
-                >
+                <span className="text-[26px] font-bold leading-none tracking-tight text-white/25">
                   {s.n}
                 </span>
               </div>
-              <h3
-                className={
-                  featured
-                    ? "mt-4 text-[17px] font-semibold tracking-tight text-white"
-                    : "mt-4 text-[16.5px] font-semibold tracking-tight text-ink"
-                }
-              >
+              <h3 className="mt-4 text-[16.5px] font-semibold tracking-tight text-white">
                 {s.title}
               </h3>
-              <p
-                className={
-                  featured
-                    ? "mt-1 text-[14px] leading-relaxed text-white/70"
-                    : "mt-1 text-[14px] leading-relaxed text-ink-soft"
-                }
-              >
+              <p className="mt-1 text-[14px] leading-relaxed text-white/75">
                 {s.text}
               </p>
             </div>
