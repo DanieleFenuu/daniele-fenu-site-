@@ -26,7 +26,7 @@ export const site = {
   whatsappMessage:
     "Ciao Daniele, ti ho trovato dal tuo sito. Vorrei farti una domanda sul sito per la mia attività.",
   email: "danielefenu2004@gmail.com",
-  website: "https://danielefenu.netlify.app", // ← il tuo URL Netlify finale (serve anche per QR + vCard)
+  website: "https://dfportfo.netlify.app", // URL Netlify finale (serve anche per QR + vCard)
   github: "https://github.com/danielefenuu",
   linkedin:
     "https://www.linkedin.com/in/daniele-fenu-761b5b365?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
