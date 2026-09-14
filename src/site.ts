@@ -17,7 +17,7 @@ export const site = {
   intro: "Aiuto le piccole/medie attività a farsi trovare online e crescere.",
   availability: "Disponibile 7/7 dalle 9.00 alle 22.00",
   photo: "", // opzionale: metti "/foto.jpg" in public/ e scrivi qui "/foto.jpg"
-  logo: "/logo.svg", // logo DF (per usare il tuo PNG originale: mettilo in public/logo.png e scrivi qui "/logo.png")
+  logo: "/logo.png", // il tuo logo DF originale
 
   // — Contatti —
   phoneDisplay: "+39 391 135 3470",
