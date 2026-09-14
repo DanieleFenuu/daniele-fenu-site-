@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   ArrowUpRight,
   Download,
@@ -7,6 +8,24 @@ import {
 import { downloadVCard } from "../lib/vcard";
 import { site } from "../site";
 import { InstagramIcon, WhatsAppIcon } from "./icons";
+
+/** Foto profilo stile Instagram ma elegante: cerchio a fianco del nome con anello sottile. */
+function ProfilePhoto() {
+  const [missing, setMissing] = useState(false);
+  if (!site.photo || missing) return null;
+  return (
+    <div className="shrink-0 rounded-full bg-ink p-[2.5px] shadow-[0_10px_28px_-14px_rgba(35,39,46,0.7)]">
+      <div className="rounded-full bg-white p-[2.5px]">
+        <img
+          src={site.photo}
+          alt={`Foto di ${site.fullName}`}
+          onError={() => setMissing(true)}
+          className="h-[76px] w-[76px] rounded-full object-cover object-[50%_18%] sm:h-[84px] sm:w-[84px]"
+        />
+      </div>
+    </div>
+  );
+}
 
 export function Hero() {
   return (
@@ -20,12 +39,15 @@ export function Hero() {
         {site.availability}
       </p>
 
-      {/* gerarchia: nome → ruolo → cosa */}
-      <h1 className="mt-5 text-[42px] font-bold leading-[1.02] tracking-[-0.03em] text-ink sm:text-5xl">
-        {site.firstName}
-        <br />
-        {site.lastName}
-      </h1>
+      {/* gerarchia: foto + nome → ruolo → cosa */}
+      <div className="mt-5 flex items-center gap-4">
+        <ProfilePhoto />
+        <h1 className="text-[42px] font-bold leading-[1.02] tracking-[-0.03em] text-ink sm:text-5xl">
+          {site.firstName}
+          <br />
+          {site.lastName}
+        </h1>
+      </div>
       <p className="mt-3 text-lg font-semibold text-accent">{site.role}</p>
       <p className="mt-2 max-w-md text-[16.5px] font-medium leading-relaxed text-ink">
         {site.tagline}

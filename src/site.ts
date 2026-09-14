@@ -16,15 +16,14 @@ export const site = {
   tagline: "Siti Web e Software fatti secondo le esigenze del cliente.",
   intro: "Aiuto le piccole/medie attività a farsi trovare online e crescere.",
   availability: "Disponibile 7/7 dalle 9.00 alle 22.00",
-  photo: "", // opzionale: metti "/foto.jpg" in public/ e scrivi qui "/foto.jpg"
+  photo: "/foto.png", // tua foto in public/foto.png
   logo: "/logo.png", // il tuo logo DF originale
 
   // — Contatti —
   phoneDisplay: "+39 391 135 3470",
   phoneHref: "+393911353470", // formato internazionale senza spazi, serve per tel: e vCard
   whatsappNumber: "393911353470", // senza "+" — serve per wa.me
-  whatsappMessage:
-    "Ciao Daniele, ti ho trovato dal tuo sito. Vorrei farti una domanda sul sito per la mia attività.",
+  whatsappMessage: "Ciao Daniele",
   email: "danielefenu2004@gmail.com",
   website: "https://dfportfo.netlify.app", // URL Netlify finale (serve anche per QR + vCard)
   github: "https://github.com/danielefenuu",
