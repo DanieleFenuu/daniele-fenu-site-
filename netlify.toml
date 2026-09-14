@@ -1,0 +1,5 @@
+/* Netlify SPA fallback: serve index.html per /qr e ogni altra route */
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
